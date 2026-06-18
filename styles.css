@@ -16,6 +16,8 @@
   --skyrim: #c9a84c;
   --fallout: #76b947;
   --rimworld: #d4845a;
+  --blender: #e87d0d;
+  --spine: #4ecdc4;
   --radius: 12px;
   --radius-lg: 20px;
   --font: "Outfit", system-ui, sans-serif;
@@ -435,6 +437,10 @@ textarea {
   gap: 20px;
 }
 
+.cards-grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -469,6 +475,8 @@ textarea {
 .card--skyrim::before { background: var(--skyrim); }
 .card--fallout::before { background: var(--fallout); }
 .card--rimworld::before { background: var(--rimworld); }
+.card--blender::before { background: var(--blender); }
+.card--spine::before { background: var(--spine); }
 
 .card-logo {
   height: 56px;
@@ -482,6 +490,27 @@ textarea {
   max-width: 160px;
   width: auto;
   object-fit: contain;
+}
+
+.card-logo--text {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.card--blender .card-logo--text {
+  background: rgba(232, 125, 13, 0.15);
+  color: var(--blender);
+}
+
+.card--spine .card-logo--text {
+  background: rgba(78, 205, 196, 0.15);
+  color: var(--spine);
 }
 
 .card h3 {
@@ -863,7 +892,8 @@ textarea {
     max-width: 220px;
   }
 
-  .cards-grid {
+  .cards-grid,
+  .cards-grid--2 {
     grid-template-columns: 1fr;
   }
 
