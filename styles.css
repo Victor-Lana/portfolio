@@ -149,34 +149,53 @@ textarea {
 .nav-right {
   display: flex;
   align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
   gap: 24px;
+  flex-wrap: nowrap;
+}
+
+.nav-lang {
+  display: flex;
+  align-items: center;
 }
 
 .lang-switch {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   padding: 3px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .lang-btn {
-  padding: 6px 10px;
+  min-width: 34px;
+  padding: 6px 8px;
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
+  line-height: 1;
   background: transparent;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   color: var(--text-muted);
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
   transition: color var(--transition), background var(--transition);
 }
 
 .lang-btn:hover {
   color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .lang-btn.active {
@@ -193,12 +212,6 @@ textarea {
 
 .logo-dot {
   color: var(--accent);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
 }
 
 .nav-links a {
@@ -222,6 +235,20 @@ textarea {
 .nav-cta:hover {
   border-color: var(--accent);
   background: var(--accent-dim);
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .nav-cta {
+    padding: 6px 12px;
+  }
 }
 
 .nav-toggle {
@@ -846,7 +873,9 @@ textarea {
     left: 0;
     right: 0;
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
+    flex-wrap: nowrap;
     background: rgba(10, 11, 15, 0.97);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
@@ -863,8 +892,15 @@ textarea {
     pointer-events: auto;
   }
 
+  .nav-lang {
+    padding-top: 12px;
+    margin-top: 4px;
+    border-top: 1px solid var(--border);
+  }
+
   .lang-switch {
-    order: -1;
+    width: 100%;
+    justify-content: center;
   }
 
   .nav-links li {
