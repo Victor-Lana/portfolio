@@ -16,17 +16,23 @@
   <header class="header" id="top">
     <nav class="nav container">
       <a href="#top" class="logo">VL<span class="logo-dot">.</span></a>
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <button class="nav-toggle" data-i18n-attr="aria-label:nav.menuOpen" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#mods">Mods</a></li>
-        <li><a href="#arte">Arte</a></li>
-        <li><a href="#servidores">Servidores</a></li>
-        <li><a href="#traducao">Tradução</a></li>
-        <li><a href="#contato" class="nav-cta">Contato</a></li>
+        <li><a href="#sobre" data-i18n="nav.sobre">Sobre</a></li>
+        <li><a href="#mods" data-i18n="nav.mods">Mods</a></li>
+        <li><a href="#arte" data-i18n="nav.arte">Arte</a></li>
+        <li><a href="#servidores" data-i18n="nav.servidores">Servidores</a></li>
+        <li><a href="#traducao" data-i18n="nav.traducao">Tradução</a></li>
+        <li><a href="#contato" class="nav-cta" data-i18n="nav.contato">Contato</a></li>
       </ul>
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button type="button" class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      </div>
     </nav>
   </header>
 
@@ -38,31 +44,31 @@
         <div class="hero-glow hero-glow--2"></div>
       </div>
       <div class="container hero-content">
-        <p class="hero-tag">Desenvolvedor · Sysadmin de Games · Tradutor · Artista</p>
+        <p class="hero-tag" data-i18n="hero.tag">Desenvolvedor · Sysadmin de Games · Tradutor · Artista</p>
         <h1 class="hero-title">
           Victor <span class="highlight">Luiz</span>
         </h1>
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n="hero.desc">
           Experiência em desenvolvimento de mods para jogos, modelagem 3D no
           Blender, animação 2D com Spine, configuração e hospedagem de
           servidores multiplayer, e tradução entre inglês, português e japonês.
         </p>
         <div class="hero-actions">
-          <a href="#mods" class="btn btn-primary">Ver experiência</a>
-          <a href="#contato" class="btn btn-ghost">Entrar em contato</a>
+          <a href="#mods" class="btn btn-primary" data-i18n="hero.btnPrimary">Ver experiência</a>
+          <a href="#contato" class="btn btn-ghost" data-i18n="hero.btnGhost">Entrar em contato</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-num">4+</span>
-            <span class="stat-label">Jogos com mods</span>
+            <span class="stat-label" data-i18n="hero.stat1">Jogos com mods</span>
           </div>
           <div class="stat">
             <span class="stat-num">5+</span>
-            <span class="stat-label">Servidores gerenciados</span>
+            <span class="stat-label" data-i18n="hero.stat2">Servidores gerenciados</span>
           </div>
           <div class="stat">
             <span class="stat-num">3</span>
-            <span class="stat-label">Idiomas</span>
+            <span class="stat-label" data-i18n="hero.stat3">Idiomas</span>
           </div>
         </div>
       </div>
@@ -71,8 +77,8 @@
     <section class="section" id="sobre">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">01 — Sobre</span>
-          <h2>Quem sou</h2>
+          <span class="section-tag" data-i18n="about.tag">01 — Sobre</span>
+          <h2 data-i18n="about.title">Quem sou</h2>
         </div>
         <div class="about-grid">
           <div class="about-photo">
@@ -80,29 +86,29 @@
           </div>
           <div class="about-content">
             <div class="about-text">
-            <p>
+            <p data-i18n="about.p1">
               Sou entusiasta de games com foco prático: criar mods que melhoram a
               experiência de jogo, manter servidores estáveis para comunidades
               multiplayer e colaborar em traduções que aproximam jogos de
               jogadores de língua portuguesa.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               Minha atuação combina programação, configuração de infraestrutura
               e trabalho linguístico — sempre com atenção à comunidade e ao
               detalhe técnico.
             </p>
             </div>
           <div class="about-skills">
-            <h3>Áreas de atuação</h3>
+            <h3 data-i18n="about.skillsTitle">Áreas de atuação</h3>
             <ul class="skill-tags">
-              <li>Modding & Scripting</li>
-              <li>Blender · Modelagem 3D</li>
-              <li>Spine · Animação 2D</li>
-              <li>Linux / Windows Server</li>
-              <li>Docker & Painéis</li>
-              <li>Localização de Games</li>
-              <li>Networking & Firewall</li>
-              <li>Backup & Monitoramento</li>
+              <li data-i18n="about.skill1">Modding & Scripting</li>
+              <li data-i18n="about.skill2">Blender · Modelagem 3D</li>
+              <li data-i18n="about.skill3">Spine · Animação 2D</li>
+              <li data-i18n="about.skill4">Linux / Windows Server</li>
+              <li data-i18n="about.skill5">Docker & Painéis</li>
+              <li data-i18n="about.skill6">Localização de Games</li>
+              <li data-i18n="about.skill7">Networking & Firewall</li>
+              <li data-i18n="about.skill8">Backup & Monitoramento</li>
             </ul>
           </div>
           </div>
@@ -113,11 +119,11 @@
     <section class="section section--alt" id="mods">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">02 — Mods</span>
-          <h2>Desenvolvimento de Mods</h2>
-          <p class="section-desc">
-            Criação e manutenção de mods para diferentes jogos, engines e
-            ecossistemas de modding.
+          <span class="section-tag" data-i18n="mods.tag">02 — Mods</span>
+          <h2 data-i18n="mods.title">Desenvolvimento de Mods</h2>
+          <p class="section-desc" data-i18n="mods.desc">
+            Criação e manutenção de mods para diferentes engines e ecossistemas
+            de modding.
           </p>
         </div>
         <div class="cards-grid">
@@ -126,7 +132,7 @@
               <img src="img/mine_logo.jpg" alt="Minecraft" loading="lazy" />
             </div>
             <h3>Minecraft</h3>
-            <p>
+            <p data-i18n="mods.minecraft.desc">
               Mods e plugins com Forge/Fabric e Bukkit/Spigot. Mecânicas
               customizadas, integração com servidores e balanceamento para
               multiplayer.
@@ -143,15 +149,13 @@
               <img src="img/skyrim_logo.jpg" alt="Skyrim" loading="lazy" />
             </div>
             <h3>Skyrim</h3>
-            <p class="card-meta">The Elder Scrolls V · Creation Engine</p>
-            <p>
+            <p data-i18n="mods.skyrim.desc">
               Mods com Creation Kit e Papyrus. Quests, itens, NPCs e patches de
               compatibilidade entre load orders complexas.
             </p>
             <ul class="card-tags">
-              <li>Creation Engine</li>
-              <li>Creation Kit</li>
               <li>Papyrus</li>
+              <li>Creation Kit</li>
               <li>xEdit</li>
             </ul>
           </article>
@@ -161,13 +165,11 @@
               <img src="img/fallout_logo.jpg" alt="Fallout 4" loading="lazy" />
             </div>
             <h3>Fallout 4</h3>
-            <p class="card-meta">Creation Engine</p>
-            <p>
-              Mods com Creation Kit. Armas, armaduras, settlements e sistemas
-              de gameplay no universo pós-apocalíptico.
+            <p data-i18n="mods.fallout.desc">
+              Desenvolvimento de conteúdo com Creation Kit. Armas, armaduras,
+              settlements e sistemas de gameplay no universo pós-apocalíptico.
             </p>
             <ul class="card-tags">
-              <li>Creation Engine</li>
               <li>Creation Kit</li>
               <li>FO4Edit</li>
               <li>Assets 3D</li>
@@ -179,7 +181,7 @@
               <img src="img/rimworld_logo.jpg" alt="RimWorld" loading="lazy" />
             </div>
             <h3>RimWorld</h3>
-            <p>
+            <p data-i18n="mods.rimworld.desc">
               Mods em C# com Harmony. Novas mecânicas, raças, eventos e
               integração com outros mods da comunidade Steam Workshop.
             </p>
@@ -196,18 +198,20 @@
     <section class="section" id="arte">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">03 — Arte</span>
-          <h2>Modelagem & Animação</h2>
-          <p class="section-desc">
+          <span class="section-tag" data-i18n="arte.tag">03 — Arte</span>
+          <h2 data-i18n="arte.title">Modelagem & Animação</h2>
+          <p class="section-desc" data-i18n="arte.desc">
             Criação de assets visuais para games — modelos 3D prontos para engine
             e personagens 2D com esqueleto animado.
           </p>
         </div>
         <div class="cards-grid cards-grid--2">
           <article class="card card--blender">
-            <div class="card-logo card-logo--text">Blender</div>
-            <h3>Modelagem 3D</h3>
-            <p>
+            <div class="card-logo">
+              <img src="img/blender.png" alt="Blender" loading="lazy" />
+            </div>
+            <h3 data-i18n="arte.blender.title">Modelagem 3D</h3>
+            <p data-i18n="arte.blender.desc">
               Modelagem de props, personagens e cenários para mods e jogos.
               Topologia, UV mapping, texturização e exportação para a
               Creation Engine (Skyrim, Fallout 4), Unity e Unreal.
@@ -221,9 +225,11 @@
           </article>
 
           <article class="card card--spine">
-            <div class="card-logo card-logo--text">Spine</div>
-            <h3>Animação 2D</h3>
-            <p>
+            <div class="card-logo">
+              <img src="img/spine.png" alt="Spine" loading="lazy" />
+            </div>
+            <h3 data-i18n="arte.spine.title">Animação 2D</h3>
+            <p data-i18n="arte.spine.desc">
               Criação de personagens e criaturas 2D com rig esquelético,
               animações de idle, walk, attack e efeitos. Integração com
               engines e frameworks 2D.
@@ -242,9 +248,9 @@
     <section class="section section--alt" id="servidores">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">04 — Servidores</span>
-          <h2>Hospedagem & Configuração</h2>
-          <p class="section-desc">
+          <span class="section-tag" data-i18n="servers.tag">04 — Servidores</span>
+          <h2 data-i18n="servers.title">Hospedagem & Configuração</h2>
+          <p class="section-desc" data-i18n="servers.desc">
             Setup, manutenção e otimização de servidores de jogos para
             comunidades multiplayer.
           </p>
@@ -254,7 +260,7 @@
             <div class="server-badge">GTA</div>
             <div class="server-info">
               <h3>GTA V — FiveM / RageMP</h3>
-              <p>
+              <p data-i18n="servers.gta.desc">
                 Configuração de servidores roleplay e freeroam. Resources,
                 frameworks (ESX/QBCore), anti-cheat, banco de dados MySQL e
                 deploy automatizado.
@@ -266,7 +272,7 @@
             <div class="server-badge">ARK</div>
             <div class="server-info">
               <h3>ARK: Survival Evolved / Ascended</h3>
-              <p>
+              <p data-i18n="servers.ark.desc">
                 Clusters PvE/PvP, mods via Steam Workshop, backups automáticos,
                 rates customizados e gerenciamento de updates.
               </p>
@@ -277,7 +283,7 @@
             <div class="server-badge">MC</div>
             <div class="server-info">
               <h3>Minecraft</h3>
-              <p>
+              <p data-i18n="servers.mc.desc">
                 Servidores survival, modpacks e minigames. Paper/Spigot,
                 plugins, worldguard, economia e integração com Discord.
               </p>
@@ -287,8 +293,8 @@
           <div class="server-item">
             <div class="server-badge">+</div>
             <div class="server-info">
-              <h3>Outros títulos</h3>
-              <p>
+              <h3 data-i18n="servers.other.title">Outros títulos</h3>
+              <p data-i18n="servers.other.desc">
                 Rust, Valheim, Palworld, Project Zomboid, Terraria e mais —
                 instalação, tuning de performance, painéis (Pterodactyl, AMP)
                 e monitoramento 24/7.
@@ -298,7 +304,7 @@
         </div>
 
         <div class="infra-bar">
-          <span>Ferramentas:</span>
+          <span data-i18n="servers.tools">Ferramentas:</span>
           <ul>
             <li>Linux</li>
             <li>Docker</li>
@@ -314,9 +320,9 @@
     <section class="section" id="traducao">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">05 — Tradução</span>
-          <h2>Localização de Jogos</h2>
-          <p class="section-desc">
+          <span class="section-tag" data-i18n="trans.tag">05 — Tradução</span>
+          <h2 data-i18n="trans.title">Localização de Jogos</h2>
+          <p class="section-desc" data-i18n="trans.desc">
             Participação em projetos de tradução comunitária e profissional de
             games.
           </p>
@@ -328,8 +334,8 @@
               <span class="lang-arrow" aria-hidden="true">→</span>
               <span class="lang">PT-BR</span>
             </div>
-            <h3>Inglês → Português</h3>
-            <p>
+            <h3 data-i18n="trans.enpt.title">Inglês → Português</h3>
+            <p data-i18n="trans.enpt.desc">
               Tradução de diálogos, menus, tooltips e arquivos de localização.
               Adaptação cultural mantendo tom e contexto do jogo original.
             </p>
@@ -341,8 +347,8 @@
               <span class="lang-arrow" aria-hidden="true">→</span>
               <span class="lang">EN</span>
             </div>
-            <h3>Japonês → Inglês</h3>
-            <p>
+            <h3 data-i18n="trans.jpen.title">Japonês → Inglês</h3>
+            <p data-i18n="trans.jpen.desc">
               Tradução de textos japoneses para inglês em RPGs, visual novels
               e títulos indie. Pesquisa de termos e consistência terminológica.
             </p>
@@ -354,8 +360,8 @@
               <span class="lang-arrow" aria-hidden="true">→</span>
               <span class="lang">PT-BR</span>
             </div>
-            <h3>Japonês → Português</h3>
-            <p>
+            <h3 data-i18n="trans.jppt.title">Japonês → Português</h3>
+            <p data-i18n="trans.jppt.desc">
               Ponte direta entre japonês e português para jogos sem versão
               oficial no Brasil. Revisão cruzada e testes in-game.
             </p>
@@ -363,12 +369,12 @@
         </div>
 
         <div class="translation-tools">
-          <h3>Ferramentas & processo</h3>
+          <h3 data-i18n="trans.toolsTitle">Ferramentas & processo</h3>
           <ul>
-            <li>Extração e reinserção de strings (xTranslator, Vortex, custom tools)</li>
-            <li>Glossários e memória de tradução</li>
-            <li>Revisão por pares e QA in-game</li>
-            <li>Compatibilidade com patches e DLCs</li>
+            <li data-i18n="trans.tool1">Extração e reinserção de strings (xTranslator, Vortex, custom tools)</li>
+            <li data-i18n="trans.tool2">Glossários e memória de tradução</li>
+            <li data-i18n="trans.tool3">Revisão por pares e QA in-game</li>
+            <li data-i18n="trans.tool4">Compatibilidade com patches e DLCs</li>
           </ul>
         </div>
       </div>
@@ -377,9 +383,9 @@
     <section class="section" id="contato">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">06 — Contato</span>
-          <h2>Vamos conversar</h2>
-          <p class="section-desc">
+          <span class="section-tag" data-i18n="contact.tag">06 — Contato</span>
+          <h2 data-i18n="contact.title">Vamos conversar</h2>
+          <p class="section-desc" data-i18n="contact.desc">
             Interessado em mods, arte, servidores ou tradução? Entre em contato.
           </p>
         </div>
@@ -403,8 +409,8 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Victor Luiz. Feito com dedicação à comunidade gamer.</p>
-      <a href="#top" class="back-top">Topo</a>
+      <p>&copy; <span id="year"></span> Victor Luiz. <span data-i18n="footer.text">Feito com dedicação à comunidade gamer.</span></p>
+      <a href="#top" class="back-top" data-i18n="footer.top">Topo</a>
     </div>
   </footer>
 

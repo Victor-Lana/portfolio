@@ -143,6 +143,45 @@ textarea {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  gap: 16px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.lang-btn {
+  padding: 6px 10px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+
+.lang-btn:hover {
+  color: var(--text);
+}
+
+.lang-btn.active {
+  background: var(--accent-dim);
+  color: var(--accent);
 }
 
 .logo {
@@ -492,38 +531,9 @@ textarea {
   object-fit: contain;
 }
 
-.card-logo--text {
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 10px 14px;
-  border-radius: 8px;
-  width: fit-content;
-}
-
-.card--blender .card-logo--text {
-  background: rgba(232, 125, 13, 0.15);
-  color: var(--blender);
-}
-
-.card--spine .card-logo--text {
-  background: rgba(78, 205, 196, 0.15);
-  color: var(--spine);
-}
-
 .card h3 {
   font-size: 1.25rem;
-  margin-bottom: 4px;
-}
-
-.card-meta {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
   margin-bottom: 10px;
-  letter-spacing: 0.02em;
 }
 
 .card p {
@@ -822,6 +832,10 @@ textarea {
     width: min(1120px, 90vw);
   }
 
+  .nav-right {
+    gap: 12px;
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -847,6 +861,10 @@ textarea {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .lang-switch {
+    order: -1;
   }
 
   .nav-links li {
