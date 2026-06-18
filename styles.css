@@ -515,7 +515,15 @@ textarea {
 
 .card h3 {
   font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.card-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
   margin-bottom: 10px;
+  letter-spacing: 0.02em;
 }
 
 .card p {
