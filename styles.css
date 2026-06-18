@@ -371,9 +371,24 @@ textarea {
 /* ===== About ===== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: 40px;
   align-items: start;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .about-text p {
@@ -455,32 +470,18 @@ textarea {
 .card--fallout::before { background: var(--fallout); }
 .card--rimworld::before { background: var(--rimworld); }
 
-.card-icon {
-  width: 40px;
-  height: 40px;
+.card-logo {
+  height: 56px;
   margin-bottom: 16px;
-  color: var(--text-muted);
+  display: flex;
+  align-items: center;
 }
 
-.card-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.card--minecraft .card-icon { color: var(--minecraft); }
-.card--skyrim .card-icon { color: var(--skyrim); }
-.card--fallout .card-icon { color: var(--fallout); }
-.card--rimworld .card-icon { color: var(--rimworld); }
-
-.icon {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
-.icon--sm {
-  width: 18px;
-  height: 18px;
+.card-logo img {
+  max-height: 100%;
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
 }
 
 .card h3 {
@@ -625,9 +626,9 @@ textarea {
 }
 
 .lang-arrow {
-  display: flex;
-  align-items: center;
   color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .lang-card h3 {
@@ -687,18 +688,12 @@ textarea {
 }
 
 .contact-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  display: block;
   padding: 20px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: border-color var(--transition), background var(--transition);
-}
-
-.contact-item .icon {
-  color: var(--accent);
 }
 
 .contact-body {
@@ -740,9 +735,6 @@ textarea {
 }
 
 .back-top {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   font-family: var(--mono);
   font-size: 0.8rem;
   transition: color var(--transition);
@@ -777,6 +769,22 @@ textarea {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  :root {
+    --header-h: 64px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .container {
+    width: min(1120px, 90vw);
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -825,21 +833,105 @@ textarea {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
+  .hero-content {
+    padding: 32px 0 56px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
 
   .hero-stats {
-    gap: 24px;
+    gap: 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-photo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-photo img {
+    max-width: 220px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .card-logo {
+    height: 48px;
+  }
+
+  .translation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .infra-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 18px;
+  }
+
+  .contact-links {
+    max-width: none;
+  }
+
+  .contact-value {
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
   }
 
   .server-item {
     flex-direction: column;
+    padding: 20px;
   }
 
   .footer-inner {
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(2.2rem, 12vw, 2.8rem);
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .stat-num {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .server-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 0.75rem;
   }
 }

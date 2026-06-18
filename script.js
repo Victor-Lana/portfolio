@@ -24,7 +24,7 @@ navLinks.querySelectorAll("a").forEach((link) => {
 });
 
 const revealEls = document.querySelectorAll(
-  ".section-header, .about-grid, .card, .server-item, .lang-card, .translation-tools, .contact-links, .infra-bar"
+  ".section-header, .about-grid, .about-photo, .card, .server-item, .lang-card, .translation-tools, .contact-links, .infra-bar"
 );
 
 revealEls.forEach((el) => el.classList.add("reveal"));
